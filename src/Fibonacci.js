@@ -12,12 +12,13 @@ fib[1] = 1; // Second Base Case
 
 var fibnumbs = 
 {
-    fibonacci : function(n) //Fibonacci Function
+	fibonacci : function(n) //Fibonacci Function
     {
-       for(i=2; i<=n; i++) //From 2 till n
-       {
-           fib[i] = fib[i-2]+fib[i-1]; //Computer Fibonacci Number Once for Each
-       }
+		if (n>1) //Only Calculate If Necessary (Not Any Base Case)
+		{
+			for(i=2; i<=n; i++) //From 2 till n
+				fib[i] = fib[i-2]+fib[i-1]; //Computer Fibonacci Number Once for Each
+		}
        
        return fib[n]; //Return Fibonacci Number
     }
